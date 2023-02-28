@@ -1,0 +1,25 @@
+{5, 2, 8, 1, 3}
+n = 4 --> {5, 2, 8, 1, 3}
+
+primeiro com segundo {5, 2, 8, 1, 3} --> 5 é maior que 2 --> troca --> {2,5,8,1,3}
+segundo com terceiro {2,5,8,1,3} --> 5 não é maior que 8 --> não troca --> {2,5,8,1,3}
+terceiro e quarto {2,5,8,1,3} --> 8 é maior que 1 --> troca --> {2,5,1,8,3}
+quarto e quinto {2,5,1,8,3} --> 8 é maior que 3 --> troca --> {2,5,1,3,8}
+
+N-- (MAIS UMA PASSAGEM, POREM SEM COMPARAR O ULTIMO ELEMENTO 3 com 8)
+n = 3 --> {2,5,1,3} {8}
+
+primeiro e segundo {2,5,1,3,8} --> 2 não é maior que 5 --> nao troca --> {2,5,1,3,8}
+segundo com terceiro {2,5,1,3,8} --> 5 é maior que 1 --> troca --> {2,1,5,3,8}
+terceiro com quarto {2,1,5,3,8} --> 5 é maior que 3 --> troca --> {2,1,3,5,8}
+
+N-- (MAIS UMA PASSAGEM, POREM SEM COMPARAR O ULTIMO E O PENULTIMO 3 com 5 e 5 com 8)
+n = 2 --> {2,1,3} {5,8}
+
+primeiro com segundo {2,1,3,5,8} --> 2 é maior que 1 --> troca --> {1,2,3,5,8}
+segundo com terceiro {1,2,3,5,8} --> 2 nao é maior que 3 --> nao troca --> {1,2,3,5,8}
+
+N--(MAIS UMA PASSAGEM, POREM SEM COMPARAR O ULTIMO, PENULTIMO E ANTIPENULTIMO 2 com 3, 3 com 5 e 5 com 8)
+n = 1 --> {1,2} {3,5,8}
+
+primeiro com segundo {1,2,3,5,8} --> 1 não é maior que 2 --> não troca --> {1,2,3,5,8}
